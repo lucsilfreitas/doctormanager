@@ -1,0 +1,24 @@
+<?php if(!class_exists('Rain\Tpl')){exit;}?>
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/res/site/css/bootstrap.css">
+    <link rel="stylesheet" href="/res/site/css/personalizado.css">
+    <link rel="stylesheet" href="/res/site/css/css.css">
+
+    <title>Doctor Manager</title>
+  </head>
+  <body id="fundo">
+       
+    <header>
+        <nav class="navbar navbar-dark bg-primary">
+          <a class="navbar-brand" href="index.html">Doctor Manger</a>
+                         
+        </nav>
+      </header>
+		

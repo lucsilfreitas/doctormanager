@@ -1,0 +1,7 @@
+nav a{
+    color: #FFF !important;
+}
+
+nav a:hover{
+    color: #000 !important;
+}
