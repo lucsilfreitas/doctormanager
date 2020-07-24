@@ -34,6 +34,10 @@ public function setData($data = array())
 
 }
 
+public function getValues()
+{
+    return $this->values;
+}
 
 }
 

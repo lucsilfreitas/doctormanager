@@ -5,6 +5,8 @@ use Hcode\Model;
 
 class User extends Model {
 
+    const SESSION = "User";
+
 public static function login($login, $password) 
 {
 
@@ -28,17 +30,37 @@ if (password_verify($password, $data["SENHA"]) === true)
 
     $user->setData($data);
 
-    var_dump($user);
-    exit;
+    $_SESSION[User::SESSION] = $user->getValues();
 
-} else {
+    return $user;
+
+} else 
+    {
     throw new \Exception("Não foi possível fazer login.", 1);
-}
+    }
 
 }
 
+public static function verifyLogin($inadmin = true)
+	{
+
+		if (
+			!isset($_SESSION[User::SESSION])
+			|| 
+			!$_SESSION[User::SESSION]
+			||
+			!(int)$_SESSION[User::SESSION]["iduser"] > 0
+			||
+			(bool)$_SESSION[User::SESSION]["iduser"] !== $inadmin
+		) {
+			
+			header("Location: /admin/login");
+			exit;
+
+		}
+
+	}
 
 }
 
-
-?>
+ ?>
