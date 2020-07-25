@@ -59,6 +59,13 @@ public static function verifyLogin($inadmin = true)
 
 		}
 
+    }
+    
+    public static function logout()
+	{
+
+		$_SESSION[User::SESSION] = NULL;
+
 	}
 
 }
