@@ -1,9 +1,9 @@
 {
-  "name": "Luciano/drmanager",
+    "name": "lucsilfreitas/drmanager",
     "authors": [
         {
-            "name": "DrManager",
-            "email": "contato@processinsys.com.br"
+            "name": "Process in Sys",
+            "email": "diretoria@processinsys.com.br"
         }
     ],
     "require": {
@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Hcode\\": "vendor\\hcodebr\\php-classes\\src"
+            "": "vendor\\hcodebr\\php-classes\\src"
         }
     }
 }
