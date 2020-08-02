@@ -1,4 +1,5 @@
 <?php 
+session_start();
 
 require_once("vendor/autoload.php");
 
@@ -20,6 +21,8 @@ $page -> setTpl("index");
 
 $app->get('/admin', function() {
     
+    User::verifyLogin();
+
     $page = new PageAdmin();
     $page -> setTpl("index");
     
