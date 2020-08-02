@@ -10,11 +10,35 @@ class Model{
         $method = substr($name, 0, 3);
         $fieldname = substr($name, 3, strlen($name)); 
 
-        var_dump($method, $fieldname);
-        exit;
+        //var_dump($method, $fieldname);
+       // exit;
+
+        switch ($method){
+
+            case "get":
+                $this->values[$fieldname];
+            break;
+
+            case  "set":
+                $this->values[$fieldname] = $args[0];
+
+            break;
+
+        }
+
     }
 
     
+    public function setData($data = array())
+    {
+        foreach ($data as $key => $value) {
+           
+            $this->{"set".$key}($value);
+        }
+
+    }
+
+
 }
 
 
