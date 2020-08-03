@@ -32,9 +32,9 @@ class User extends Model {
 
             $user->setData($data);
             
-            return $user;
-
             $_SESSION[User::SESSION] =  $user->getValues();
+
+            return $user;
 
         } else {
             throw new \Exception("Usuário inexistente ou senha inválida");
@@ -58,6 +58,11 @@ class User extends Model {
 
         }
 
+    }
+
+    public static function logout(){
+        
+        $_SESSION[User::SESSION] = NULL;
     }
 
 
