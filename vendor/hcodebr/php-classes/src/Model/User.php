@@ -71,11 +71,17 @@ class User extends Model {
         $sql = new Sql();
          return $sql->select("SELECT * FROM tb_users a INNER JOIN tb_persons b USING(idperson) ORDER BY  b.desperson");
 
-    
-    
+     
     }
 
-
+    public function get($value) {
+        $stmt = new Sql;
+        $return = $stmt->select("SELECT * FROM tb_users a INNER JOIN tb_persons b USING(idperson) WHERE a.iduser=:ID", [
+            ':ID' => $value
+        ]);
+     
+        $this->setData($return[0]);
+    }
 
 }
 
